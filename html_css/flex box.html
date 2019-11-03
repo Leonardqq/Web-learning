@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Flex Box</title>
+    <style>
+        body {
+            width: 60%;
+            margin: auto;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            margin: 10px;
+            text-align: center;
+            color: white;
+            border-radius: 50%;
+            background-color: pink;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .direction-row {
+            flex-direction: row;
+        }
+
+        .direction-row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .direction-column {
+            flex-direction: column;
+        }
+
+        .direction-column-reverse {
+            flex-direction: column-reverse;
+        }
+
+        .nowrap {
+            flex-wrap: nowrap;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+
+        .flex-flow {
+            flex-flow: row-reverse wrap;
+        }
+
+        .flex-start {
+            justify-content: flex-start;
+        }
+
+        .flex-end {
+            justify-content: flex-end;
+        }
+
+        .center {
+            justify-content: center;
+        }
+
+        .space-between {
+            justify-content: space-between;
+        }
+
+        .space-around {
+            justify-content: space-around;
+        }
+        
+        .space-evenly {
+            justify-content: space-evenly;    
+        }
+
+        .box-wrap {
+            width: 100%;
+            height: 300px;
+            box-sizing: border-box;
+            border: 1px solid red;
+        }
+
+        .box-stretch {
+            margin: 10px;
+            text-align: center;
+            background-color: yellow;
+        }
+
+        .items-stretch {
+            align-items: stretch;
+        }
+
+        .items-flex-start {
+            align-items: flex-start;
+        }
+
+        .items-flex-end {
+            align-items: flex-end;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .items-baseline {
+            align-items: baseline;
+        }
+
+        .box-wrap2 {
+            width: 50px;
+            height: 200px;
+            border: 1px solid green;
+        }
+
+        .box2 {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            box-sizing: border-box;
+            border: 1px solid blue;
+            background-color: yellow;
+        }
+
+        .content-stretch {
+            flex-wrap: wrap;
+            align-content: stretch;
+        }
+
+        .content-flex-start {
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+
+        .content-flex-end {
+            flex-wrap: wrap;
+            align-content: flex-end;
+        }
+
+        .content-center {
+            flex-wrap: wrap;
+            align-content: center;
+        }
+
+        .content-space-between {
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .content-space-around {
+            flex-wrap: wrap;
+            align-content: space-around;
+        }
+
+        .content-space-evenly {
+            flex-wrap: wrap;
+            align-content: space-evenly;
+        }
+
+        .order {
+            order: -1;
+        }
+
+        .flex-grow {
+            flex-grow: 2;
+        }
+
+        .flex-shrink {
+            flex-shrink: 3;
+        }
+
+        .flex-basis {
+            flex-basis: 200px;
+        }
+
+        .flex-attribution {
+            flex: 3 0 90px;
+        }
+
+        .self-auto {
+            align-self: auto;
+        }
+
+        .self-stretch {
+            align-self: stretch;
+        }
+
+        .self-flex-start {
+            align-self: flex-start;
+        }
+
+        .self-flex-end {
+            align-self: flex-end;
+        }
+
+        .self-center {
+            align-self: center;
+        }
+
+        .self-baseline {
+            align-self: baseline;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Flex-direction : this property determines the direction of the main-axis</h3>
+    <span>row(default)</span>
+    <div class="flex direction-row">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <span>row-reverse</span>
+    <div class="flex direction-row-reverse">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <span>column</span>
+    <div class="flex direction-column">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <span>column-reverse</span>
+    <div class="flex direction-column-reverse">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <hr />
+    <h3>Flex-wrap : this property determines whether to wrap items</h3>
+    <span>nowrap（default）</span>
+    <div class="flex nowrap" style="width:400px">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+    </div>
+    <span>wrap：the first line is on the top</span>
+    <div class="flex wrap" style="width:400px">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+    </div>
+    <span>wrap-reverse：the first line is on the bottom</span>
+    <div class="flex wrap-reverse" style="width:400px">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+    </div>
+    <hr />
+    <h3>Flex-flow : this is an abbr for the flex direction and flex wrap attributes</h3>
+    <div class="flex flex-flow"  style="width:400px">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+    </div>
+    <hr />
+    <h3>Justify-content : determines the alignment of the items on the main-axis</h3>
+    <span>flex-start（default）</span>
+    <div class="flex flex-start">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <span>flex-end</span>
+    <div class="flex flex-end">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <span>center</span>
+    <div class="flex center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <span>space-between</span>
+    <div class="flex space-between">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <span>space-around</span>
+    <div class="flex space-around">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <span>space-evenly</span>
+    <div class="flex space-evenly">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    <hr />
+    <h3>Align-items : determines the alignment of the items on the crossed-axis</h3>
+    <span>stretch（default）</span>
+    <div class="box-wrap flex items-stretch">
+        <div class="box-stretch">1</div>
+        <div class="box-stretch">2</div>
+        <div class="box-stretch">3</div>
+        <div class="box-stretch">4</div>
+        <div class="box-stretch">5</div>
+    </div>
+    <span>flex-start</span>
+    <div class="box-wrap flex items-flex-start">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+    <span>flex-end</span>
+    <div class="box-wrap flex items-flex-end">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+    <span>center</span>
+    <div class="box-wrap flex items-center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+    <span>baseline</span>
+    <div class="box-wrap flex items-baseline">
+        <div class="box" style="line-height: 10px">1</div>
+        <div class="box" style="line-height: 20px">2</div>
+        <div class="box" style="line-height: 30px">3</div>
+        <div class="box" style="line-height: 40px">4</div>
+        <div class="box" style="line-height: 50px">5</div>
+    </div>
+    <hr />
+    <h3>Align-content : determines the alignment of multiple axises. This property does not work if there was only one axis existed</h3>
+    <span>stretch（default）</span>
+    <div class="box-wrap2 flex content-stretch">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+    </div>
+    <span>flex-start</span>
+    <div class="box-wrap2 flex content-flex-start">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+    </div>
+    <span>flex-end</span>
+    <div class="box-wrap2 flex content-flex-end">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+    </div>
+    <span>center</span>
+    <div class="box-wrap2 flex content-center">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+    </div>
+    <span>space-between</span>
+    <div class="box-wrap2 flex content-space-between">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+    </div>
+    <span>space-around</span>
+    <div class="box-wrap2 flex content-space-around">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+    </div>
+    <span>space-evenly</span>
+    <div class="box-wrap2 flex content-space-evenly">
+            <div class="box2">1</div>
+            <div class="box2">2</div>
+            <div class="box2">3</div>
+        </div>
+    <hr />
+    <h3>Order : determines the order in which items are arranged. The smaller the value is, the higher the arrangement is. The default value is 0.</h3>
+    <div class="flex">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box order">99</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+    <hr />
+    <h3>Flex-grow : determines the magnification of an item, which is 0 by default, that is, if there is any remaining space, it will not be enlarged</h3>
+    <div class="flex">
+        <div class="box">1</div>
+        <div class="box flex-grow">2</div>
+        <div class="box">1</div>
+    </div>
+    <hr />
+    <h3>Flex-shrink : determines the reduction scale of an item, which is 1 by default, that is, if there is not enough space, the item will be reduced.</h3>
+    <div class="flex">
+        <div class="box">1</div>
+        <div class="box flex-shrink">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    <hr>
+    <h3>Flex-basis : determines the main size of the item before allocating extra space. According to this property, the browser calculates whether the main-axis has extra space. Its default value is auto, which is the original size of the item</h3>
+    <div class="flex">
+        <div class="box">1</div>
+        <div class="box flex-basis">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    <hr>
+    <h3>Flex : is an abbr for flex-grow, flex-shrink and flex-basis, which is 0 1 auto by default. The first argument is necessary, but the another two are not</h3>
+    <div class="flex">
+        <div class="box">1</div>
+        <div class="box flex-attribution">2</div>
+        <div class="box">3</div>
+        <div class="box flex-attribution">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    <hr />
+    <h3>Align-self : allows a single item to have a different alignment than other items, overriding the align-items property</h3>
+    <span>auto/stretch（default）/flex-start/flex-end/center</span>
+    <div class="box-wrap flex">
+        <div class="box self-auto">auto</div>
+        <div class="box-stretch self-stretch">stretch</div>
+        <div class="box self-flex-start">start</div>
+        <div class="box self-flex-end">end</div>
+        <div class="box self-center">center</div>
+        <div class="box self-baseline" style="line-height: 20px">baseline</div>
+    </div>
+    <span>baseline</span>
+    <div class="box-wrap flex">
+        <div class="box" style="line-height: 10px">1</div>
+        <div class="box self-baseline" style="line-height: 20px">2</div>
+        <div class="box" style="line-height: 30px">3</div>
+        <div class="box" style="line-height: 40px">4</div>
+        <div class="box" style="line-height: 50px">5</div>
+    </div>
+</body>
+
+</html>
