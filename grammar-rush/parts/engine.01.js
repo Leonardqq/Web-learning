@@ -1,4 +1,3 @@
-
 /* ============================================================
    Grammar Rush v3 — 语法树 + 题库生成器
    ------------------------------------------------------------
@@ -256,7 +255,7 @@ const ING_IE = [
   ['tie', 'tying', 'She is ___ (tie) posters about climate change to the railings.', 'ie 变 y 再加 -ing。'],
   ['lie', 'lying', 'The students are ___ (lie) on the grass during the lunch break.', 'ie 变 y 再加 -ing。'],
   ['tie', 'tying', 'He is ___ (tie) the laces of his running shoes.', 'ie 变 y 再加 -ing。'],
-  ['die', 'dying', 'Some local languages are ___ (dying) out because of globalisation.', 'ie 变 y 再加 -ing。'],
+  ['die', 'dying', 'Some local languages are ___ (die) out because of globalisation.', 'ie 变 y 再加 -ing。'],
   ['lie', 'lying', 'The new museum ___ (lie) at the heart of the old town.', 'ie 变 y 再加 -ing。'],
   ['tie', 'tying', 'Our two schools ___ (tie) for first place this year.', 'ie 变 y 再加 -ing。'],
   ['lie', 'lying', 'Much of the plastic waste ___ (lie) on the ocean floor.', 'ie 变 y 再加 -ing。'],
@@ -398,4 +397,4 @@ const IRREG_PAST = [
   const irregPastList = () => IRREG_PAST.map(([v, past, o, time]) =>
     f(`He ___ (${v}) ${o} ${time}.`, past, `不规则动词过去式：${v} → ${past}。`));
   const irregPastNeg = () => IRREG_PAST.map(([v, past, o, time]) =>
-    f(`She ___ (not ${v}) ${o} ${time}.`, `didn't ${v}|did not ${v}`, `一般过去时否定：didn't + 动词原形 ${v}（不能用过去式）。`));
+    f(`She ___ (not ${v}) ${o} ${time}.`, `didn't ${v}|did not ${v}`, `一般过去时否定：didn't + 动词原形 ${v}（不能用
