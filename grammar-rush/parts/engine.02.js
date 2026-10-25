@@ -1,4 +1,4 @@
-过去式 ${past}。`));
+过去式 ${past}）。`));
   const irregPastYesNo = () => IRREG_PAST.map(([v, past, o, time]) =>
     q(`___ she ${v} ${o} ${time}?`, 'Did', ['Do', 'Does', 'Was'], `一般过去时一般疑问句：Did + 主语 + 动词原形 ${v}。`));
 
