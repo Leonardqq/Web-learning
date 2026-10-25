@@ -197,7 +197,7 @@ const PC_ROWS = [
       `现在进行时否定：${r0.be} + not + 动词-ing。`));
   const pcYesNo = () => PC_ROWS.map(r0 =>
     q(`___ ${lowerSubject(r0.s)} ${r0.ing} ${r0.o} ${r0.time}?`, cap(r0.be),
-      ['Am', 'Is', 'Are', 'Be'], `一般疑问时把 be 动词 ${r0.be} 提到主语前。`));
+      ['Am', 'Is', 'Are', 'Be'], `一般疑问句把 be 动词 ${r0.be} 提到主语前。`));
 
 const PC_WH = [
   ['What', 'are', 'the students planting in the school garden'],
